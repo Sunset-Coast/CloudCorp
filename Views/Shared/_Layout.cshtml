@@ -1,0 +1,125 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - CloudCorp</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/CloudCorp.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <header>
+        <div class="navsection">
+            <div class="nav-bar a-nav"
+                 data-collapse="medium"
+                 data-animation="default"
+                 data-duration="200">
+                <div class="navwrap">
+                    <a class="a-navbar-brand"
+                       href="/"
+                       aria-label="home"
+                       aria-current="page">
+                        <img src="https://assets.website-files.com/5f10771cbfea70224f1ce526/5f69042c3080b1195a9a5c91_tiny-logo.svg"
+                             height="34"
+                             alt="" />
+                    </a>
+
+                    <div class="navmenu a-navmenu justify-content-end" id="menu">
+                        <div class="linkswrap">
+                            <a class="nav-link a-nav-link" href="#">Companies</a>
+                            <a class="nav-link a-nav-link" href="#">About</a>
+                            <a class="nav-link a-nav-link"
+                               href="https://podcast.tinycapital.com/">Podcast</a>
+                            <div data-hover="true"
+                                 data-delay="150"
+                                 class="nav-dropdown a-dropdown">
+                                <div class="dropdown-toggle a-dropdown-toggle">
+                                    <img src="https://assets.website-files.com/5f10771cbfea70224f1ce526/5f10771cbfea70874a1ce561_arrowDrop.svg"
+                                         alt
+                                         class="dropdownicon" />
+                                    <div class="dropdownlabel">More</div>
+                                </div>
+                            </div>
+                            <a href="mailto:hi@tinycapital.com"
+                               class="button navbutton a-inline-block">
+                                <div>Get in touch</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="footerwrap">
+        <div class="footerhead">
+            <a class="brand a-brand" href="/" aria-label="home" aria-current="page">
+                <img src="https://assets.website-files.com/5f10771cbfea70224f1ce526/5f69042c3080b1195a9a5c91_tiny-logo.svg"
+                     height="34"
+                     width="58"
+                     alt />
+            </a>
+            <div class="a-selling-left footergrid">
+                <div class="footercol">
+                    <div class="body3b" style="margin-bottom: 12px">Tiny</div>
+                    <a href="/companies" class="bottomlink">Companies</a>
+                    <a href="/about" class="bottomlink">About</a>
+                    <a href="mailto:hi@tinycapital.com" class="bottomlink">Contact</a>
+                    <a href="https://podcast.tinycapital.com/" class="bottomlink">Podcast</a>
+                </div>
+                <div class="footercol footercol2">
+                    <a href="/writing" class="bottomlink write">Writing</a>
+                    <a href="#"
+                       data-w-id="562568cc-755c-082c-f5ce-0c3a1661ad4a"
+                       class="bottomlink">Newsletter</a>
+                    <a href="https://www.tiny.foundation/"
+                       target="_blank"
+                       class="bottomlink">The Tiny Foundation</a>
+                </div>
+                <div class="footercol">
+                    <div class="body3b footerbottom">Work with us</div>
+
+                    <a href="https://recruitment.tinycapital.com/"
+                       target="_blank"
+                       class="bottomlink">Work for a Tiny company</a>
+                    <a href="/scout" class="bottomlink">Become a Tiny scout</a>
+                </div>
+            </div>
+        </div>
+        <div class="newswrap">
+            <div>
+                Sign up for the Tiny Dispatch, a monthly digest of what we're
+                thinking, learning, and looking to do next.
+            </div>
+            <div class="block a-form">
+                <form class="form">
+                    <input type="email"
+                           class="text-email a-input border-0"
+                           maxlength="200"
+                           name="Email"
+                           placeholder="Email Address" />
+                    <i class="bi bi-arrow-right-circle text-light"> </i>
+                </form>
+            </div>
+            <div>
+                <div class="body2">© 2022 Tiny</div>
+                <a href="#top" class="returnlink body2 a-inline-block text-end">
+                    <div class="buttontext">
+                        Back to top <i class="bi bi-arrow-up-circle"></i>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
