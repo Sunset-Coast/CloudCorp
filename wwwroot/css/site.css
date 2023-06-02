@@ -5,31 +5,40 @@
 }
 
 html {
-    height: 100%;
+    height: 100%;   
+
 }
 
 body {
     background-color: var(--background-main);
     color: var(--text-color);
     font-family: Objectsans, sans-serif;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 30px;
     font-weight: 300;
     margin: 0;
     display: grid;
     -ms-overflow-style: none;
-    scrollbar-width: none;
+    scrollbar-width: none; 
+    max-width: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+ 
 }
 
     body::-webkit-scrollbar {
         display: none !important;
     }
 
+main{
+    overflow-x: hidden;
+    width: auto;
+}
 h1 {
     margin-top: 0px;
     margin-bottom: 32px;
-    font-size: 72px;
-    line-height: 80px;
+    font-size: 44px;
+    line-height: 48px;
     font-weight: 700;
 }
 
@@ -37,8 +46,8 @@ h2 {
     margin-top: 0px;
     margin-bottom: 32px;
     font-family: Objectsans, sans-serif;
-    font-size: 44px;
-    line-height: 52px;
+    font-size: 1.7rem;
+    line-height: 2.1rem;
     font-weight: 700;
     -o-object-fit: fill;
     object-fit: fill;
@@ -48,8 +57,12 @@ h3 {
     margin-top: 0px;
     margin-bottom: 32px;
     font-family: Objectsans, sans-serif;
-    font-size: 36px;
-    line-height: 48px;
+    font-size: 2rem;
+    line-height: 1.9rem;
+    font-weight: 700;
+}
+h4{
+    font-size: 1rem;
     font-weight: 700;
 }
 
@@ -63,7 +76,7 @@ a {
 }
 
 .nav-bar {
-    width: 100%;
+
     margin-right: auto;
     margin-left: auto;
     justify-content: space-between;
@@ -229,13 +242,18 @@ img {
     color: #1a21ff;
 }
 
+ section, section.heromain {
+ padding-left: 32px;
+    padding-right: 32px;
+ }
 .heromain {
     display: flex;
-    height: 50vh;
-    min-height: 600px;
-    padding-top: 48px;
-    padding-bottom: 48px;
+    height: auto;
+    min-height: auto;
+    padding-top: 86px;
+    padding-bottom: 80px;
     align-items: center;
+   
 }
 
 .herobody {
@@ -291,14 +309,13 @@ img {
     margin-left: auto;
     flex-direction: column;
     max-width: 1246px;
-    padding-top: 108px;
-    padding-bottom: 108px;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
 }
 
     .wrap.sellingwrap {
         max-width: 1246px;
-        padding-top: 56px;
-        padding-bottom: 64px;
+       
     }
 
 .sellingtext {
@@ -352,9 +369,11 @@ img {
     align-items: flex-start;
 }
 
-.bussinesswrap {
+.businesswrap {
     position: relative;
-    margin-top: 48px;
+   text-align: center;
+   flex-direction: column;
+ display: flex;
 }
 
 .sellingbody {
@@ -366,13 +385,7 @@ img {
     text-align: center;
 }
 
-.headline {
-    margin-top: 0px;
-    margin-bottom: 32px;
-    font-size: 44px;
-    line-height: 52px;
-    font-weight: 700;
-}
+
 
 .centered {
     text-align: center;
@@ -401,6 +414,7 @@ img {
     flex-direction: column;
     border-radius: 8px;
     text-decoration: none;
+    margin-bottom: 2rem;
 }
 
     .cardstyle.cardcolor {
@@ -609,11 +623,7 @@ ol {
     text-decoration: none;
 }
 
-.buyicon {
-    display: flex;
-    margin-bottom: 24px;
-    align-items: center;
-}
+
 
 .body3b {
     margin-bottom: 4px;
@@ -628,6 +638,14 @@ ol {
     font-size: 14px;
     line-height: 20px;
     font-weight: 400;
+}
+
+.buy-column-btm{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
 }
 
 .buylayout2 {
@@ -710,16 +728,16 @@ p.body2 {
     font-weight: 400;
 }
 
-.wrap.intouchwrap {
+/*.wrap.intouchwrap {
     display: -webkit-box;
     display: flex;
-    max-width: 1080px;
+    max-width: 850px;
     padding-top: 80px;
     padding-bottom: 120px;
     flex-direction: column;
     align-items: center;
     text-align: center;
-}
+}*/
 
 .intouch {
     font-size: 38px;
@@ -728,8 +746,11 @@ p.body2 {
 
 .leadwrap {
     position: relative;
+    flex-direction: column-reverse;
+    justify-content: flex-end;
+    align-items: flex-start;
     display: flex;
-    padding: 42px 60px;
+    padding: 32px;
     justify-content: space-between;
     border-radius: 8px;
     background-color: #fff;

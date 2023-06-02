@@ -10,7 +10,7 @@
 </head>
 <body>
     <header>
-        <div class="navsection">
+      @*  <nav class="navsection">
             <div class="nav-bar a-nav"
                  data-collapse="medium"
                  data-animation="default"
@@ -36,7 +36,7 @@
                                  class="nav-dropdown a-dropdown">
                                 <div class="dropdown-toggle a-dropdown-toggle">
                                     <img src="https://assets.website-files.com/5f10771cbfea70224f1ce526/5f10771cbfea70874a1ce561_arrowDrop.svg"
-                                         alt
+                                         alt=""
                                          class="dropdownicon" />
                                     <div class="dropdownlabel">More</div>
                                 </div>
@@ -49,21 +49,99 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </nav>*@
+
+        <nav class="navbar ">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Offcanvas navbar</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Link</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Dropdown
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <form class="d-flex mt-3" role="search">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-success" type="submit">Search</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </nav>
     </header>
-    <div class="container">
-        <main role="main" class="pb-3">
+ 
+        <main role="main" class="">
             @RenderBody()
         </main>
-    </div>
+
 
     <footer class="footerwrap">
-        <div class="footerhead">
+
+        <section class="wrap">
+            <a class="brand a-brand mb-5" href="/" aria-label="home" aria-current="page">
+                <img src="https://assets.website-files.com/5f10771cbfea70224f1ce526/5f69042c3080b1195a9a5c91_tiny-logo.svg"
+                     height="34"
+                     width="58"
+                     alt="" />
+            </a>
+
+            <div class="row row-cols-1">
+                <div class="col-12 col-lg-4">
+                    <div class="body3b">Tiny</div>
+                    <a href="/companies" class="bottomlink">Companies</a>
+                    <a href="/about" class="bottomlink">About</a>
+                    <a href="mailto:hi@tinycapital.com" class="bottomlink">Contact</a>
+                    <a href="https://podcast.tinycapital.com/" class="bottomlink">Podcast</a>
+                </div>
+                <div class="col-12 col-lg-4">
+                    <a href="/writing" class="bottomlink">Writing</a>
+                    <a href="#"
+                       data-w-id="562568cc-755c-082c-f5ce-0c3a1661ad4a"
+                       class="bottomlink">Newsletter</a>
+                    <a href="https://www.tiny.foundation/"
+                       target="_blank"
+                       class="bottomlink">The Tiny Foundation</a>
+                </div>
+                <div class="col-12 col-lg-4 mt-5 mt-lg-0">
+                    <h4> Work With Us</h4>
+                    <a href="https://recruitment.tinycapital.com/"
+                       target="_blank"
+                       class="bottomlink">Work for a Tiny company</a>
+                    <a href="/scout" class="bottomlink">Become a Tiny scout</a>
+                </div>
+
+            </div>
+        </section>
+    @*    <div class="footerhead">
             <a class="brand a-brand" href="/" aria-label="home" aria-current="page">
                 <img src="https://assets.website-files.com/5f10771cbfea70224f1ce526/5f69042c3080b1195a9a5c91_tiny-logo.svg"
                      height="34"
                      width="58"
-                     alt />
+                     alt="" />
             </a>
             <div class="a-selling-left footergrid">
                 <div class="footercol">
@@ -91,8 +169,12 @@
                     <a href="/scout" class="bottomlink">Become a Tiny scout</a>
                 </div>
             </div>
-        </div>
-        <div class="newswrap">
+        </div>*@
+
+
+
+
+        <div class="newswrap p-3">
             <div>
                 Sign up for the Tiny Dispatch, a monthly digest of what we're
                 thinking, learning, and looking to do next.
