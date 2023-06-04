@@ -74,7 +74,10 @@ a {
     color: #fff;
     text-decoration: underline;
 }
-
+#offcanvasNavbar{
+   background-color: blue;
+ 
+}
 .nav-bar {
 
     margin-right: auto;
@@ -82,6 +85,14 @@ a {
     justify-content: space-between;
     align-items: center;
     background-color: transparent;
+}
+.navbar-toggler{
+    
+    font-size: 2rem;
+    color: white;
+}
+.navbar-toggler-icon{
+    color: blue !important;
 }
 
 .dropdown-toggle::after {
@@ -234,6 +245,7 @@ img {
 
 .a-inline-block {
     max-width: 100%;
+
 }
 
 .button:hover {
@@ -802,7 +814,7 @@ p.body2 {
 }
 
 .leadicon {
-    font-size: larger;
+    font-size: 2rem;
     margin-left: 7px;
 }
 
