@@ -1044,27 +1044,73 @@ input {
     border: none;
 }
 
+@media screen and (min-width: 280px){
+    .scouttext {
+        width: 190px;
+        flex-direction: column-reverse;
+        align-items: center;
+        margin-left: 0;
+        display: flex;
+        font-size: .8rem;
+    }
+    .leadbody {
+        font-size: .9rem !important;
+      
+    }
+}
 
-
-@media only screen and (max-width: 767px) {
+@media only screen and (min-width: 480px) {
+    h2{
+        font-size:1.6rem;
+    }
     .leadwrap {
         align-items: center;
     }
     body, p, li{
         font-size: 1.2rem;
     }
-    .intouch-button{
+  .itemwrap{
+      display: flex;
+      flex-direction: column;
+      align-items:center;
+  }
+/*    .intouch-button{
         margin-left: 22%;
         margin-right: 22%;
         font-size: 1.1rem;
+    }*/
+  /*  .leadbody {
+        font-size: 1rem;
+        margin-right: 7rem;
+    }*/
+    .intouch-button {
+        margin-left: 30%;
+        margin-right: 30%;
+        font-size: 1.1rem;
+    }
+    .scouttext {
+        width: 450px;
+        flex-direction: column-reverse;
+        align-items: center;
+        margin-left: 0;
+       
+        display: flex;
+        font-size: .8rem;
+    }
+  .leadbody{
+        font-size: 1rem !important;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
     }
 }
 
-@media only screen and  (max-width: 991px) {
+
+
+@media only screen and  (min-width: 767px) {
 
     h1{
-        font-size: 6rem;
-        line-height: 6rem;
+        font-size: 5rem;
+        line-height: 5rem;
     }
     body, p, li {
         font-size: 1.5rem;
@@ -1085,9 +1131,37 @@ input {
         margin-left: 30%;
         margin-right: 30%;
     }
-}
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .navbar-expand-lg .navbar-nav .nav-link {
+        font-size: 1rem;
+    }
+    .scouttext {
+        width: 600px;
+        flex-direction: column-reverse;
+        align-items: flex-start;
+        margin-left: 0;
+        margin-right: 5rem;
+        display: flex;
+        font-size: 1rem;
+    }
+    .leadbody {
+        font-size: 1rem;
+        margin-right: 7rem;
+    }
 
+    .scoutimage {
+        width: 250px;
+        position: absolute;
+        flex: none;
+        align-self: center;
+        display: flex;
+        right: 2%;
+    }
+
+}
+@media only screen and (min-width: 992px)  {
+    .navbar-expand-lg .navbar-nav .nav-link{
+        font-size: 1.5rem;
+    }
     h1 {
         font-size: 6rem;
         line-height: 6rem;
@@ -1101,13 +1175,19 @@ input {
         font-size: 3.5rem;
         line-height: 3.5rem;
     }
+   .nav-link{
+        font-size: 4rem;
+    }
 
     .intouch-button {
         margin-left: 39%;
         margin-right: 39%;
         font-size: 1.3rem;
     }
-
+    .leadwrap{
+        margin-left: 4rem;
+        margin-right: 4rem;
+    }
   
     .read-button {
         margin-left: 20%;
@@ -1149,7 +1229,15 @@ input {
         font-size: 3.5rem;
         line-height: 3.5rem;
     }
-
+    .navbar-expand-lg .navbar-nav .nav-link {
+        font-size: 1.8rem;
+    }
+    .leadwrap {
+        margin-left: 7rem;
+        margin-right: 7rem;
+        display: flex;
+        align-items: flex-start;
+    }
     .intouch-button {
         margin-left: 39%;
         margin-right: 39%;
@@ -1172,12 +1260,13 @@ input {
     }
 
     .scoutimage {
-        width: 250px;
+        width: 300px;
         position: absolute;
         flex: none;
         align-self: center;
         display: flex;
         right: 2%;
+        top: 1%;
     }
 }
 
