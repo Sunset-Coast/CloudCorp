@@ -57,7 +57,7 @@ h3 {
     margin-top: 0px;
     margin-bottom: 32px;
     font-family: Objectsans, sans-serif;
-    font-size: 2rem;
+    font-size: 1.4rem;
     line-height: 1.9rem;
     font-weight: 700;
 }
@@ -292,7 +292,7 @@ img {
     max-width: 850px;
     margin-right: auto;
     margin-left: auto;
-    padding-bottom: 0px;
+    padding-bottom: 2rem;
     text-align: center;
 }
 
@@ -1043,3 +1043,141 @@ input {
     color: #fff;
     border: none;
 }
+
+
+
+@media only screen and (max-width: 767px) {
+    .leadwrap {
+        align-items: center;
+    }
+    body, p, li{
+        font-size: 1.2rem;
+    }
+    .intouch-button{
+        margin-left: 22%;
+        margin-right: 22%;
+        font-size: 1.1rem;
+    }
+}
+
+@media only screen and  (max-width: 991px) {
+
+    h1{
+        font-size: 6rem;
+        line-height: 6rem;
+    }
+    body, p, li {
+        font-size: 1.5rem;
+    }
+    h2{
+        font-size: 3rem;
+        line-height: 3rem;
+    }
+    .intouch-button {
+        margin-left: 37%;
+        margin-right: 37%;
+        font-size: 1.1rem;
+    }
+    .leadwrap {
+        align-items: center;
+    }
+    .read-button{
+        margin-left: 30%;
+        margin-right: 30%;
+    }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+
+    h1 {
+        font-size: 6rem;
+        line-height: 6rem;
+    }
+
+    body, p, li {
+        font-size: 1.3rem;
+    }
+
+    h2 {
+        font-size: 3.5rem;
+        line-height: 3.5rem;
+    }
+
+    .intouch-button {
+        margin-left: 39%;
+        margin-right: 39%;
+        font-size: 1.3rem;
+    }
+
+  
+    .read-button {
+        margin-left: 20%;
+        margin-right: 20%;
+    }
+
+    .scouttext {
+        width: 600px;
+        flex-direction: column-reverse;
+       
+        align-items: flex-start;
+       margin-left: 0;
+        margin-right: 5rem;
+        display: flex;
+    }
+    .scoutimage{
+        width: 250px;
+        position: absolute;
+        flex:none;
+        align-self: center;
+        display: flex;
+        right: 2%;
+    }
+}
+
+
+@media only screen and (min-width: 1200px) {
+
+    h1 {
+        font-size: 6rem;
+        line-height: 6rem;
+    }
+
+    body, p, li {
+        font-size: 1.3rem;
+    }
+
+    h2 {
+        font-size: 3.5rem;
+        line-height: 3.5rem;
+    }
+
+    .intouch-button {
+        margin-left: 39%;
+        margin-right: 39%;
+        font-size: 1.3rem;
+    }
+
+
+    .read-button {
+        margin-left: 20%;
+        margin-right: 20%;
+    }
+
+    .scouttext {
+        width: 600px;
+        flex-direction: column-reverse;
+        align-items: flex-start;
+        margin-left: 0;
+        margin-right: 5rem;
+        display: flex;
+    }
+
+    .scoutimage {
+        width: 250px;
+        position: absolute;
+        flex: none;
+        align-self: center;
+        display: flex;
+        right: 2%;
+    }
+}
+
