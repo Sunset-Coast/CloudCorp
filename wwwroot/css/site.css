@@ -1065,6 +1065,8 @@ input {
     }
     .leadwrap {
         align-items: center;
+        margin-left: 6%;
+        margin-right: 6%;
     }
     body, p, li{
         font-size: 1.2rem;
@@ -1126,6 +1128,8 @@ input {
     }
     .leadwrap {
         align-items: center;
+        margin-right: 2%;
+        margin-left: 2%;
     }
     .read-button{
         margin-left: 30%;
