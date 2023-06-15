@@ -98,16 +98,45 @@
         </main>
 
 
-    <footer class="footerwrap">
 
-        <section class="wrap">
+        <footer class="footerwrap">
+            <section class="wrap">
+            <div class="row">
+                <div class="col-12 col-md-4">
+                <a class="brand a-brand mb-5" href="/" aria-label="home" aria-current="page">
+                    <img src="https://assets.website-files.com/5f10771cbfea70224f1ce526/5f69042c3080b1195a9a5c91_tiny-logo.svg"
+                         height="34"
+                         width="58"
+                         alt="" />
+                </a>
+                </div>
+                <div class="col-12 col-md-4">
+                <div>
+                    <div class="copyright">© 2022 Tiny</div>
+                   
+                </div>
+                </div>
+                <div class="col-12 col-md-4">
+                <a href="#top" class="returnlink">
+                    <div class="buttontext d-lg-flex justify-content-lg-end">
+                        Back to top <i class="bi bi-arrow-up-circle"></i>
+                    </div>
+                </a>
+                </div>
+            </div>
+        </section>
+        </footer>
+
+
+    @*   <footer class="footerwrap">
+   <section class="wrap">
             <a class="brand a-brand mb-5" href="/" aria-label="home" aria-current="page">
                 <img src="https://assets.website-files.com/5f10771cbfea70224f1ce526/5f69042c3080b1195a9a5c91_tiny-logo.svg"
                      height="34"
                      width="58"
                      alt="" />
-            </a>
-
+            </a>*@
+@*
             <div class="row row-cols-1">
                 <div class="col-12 col-lg-4">
                     <div class="body3b">Tiny</div>
@@ -134,7 +163,7 @@
                 </div>
 
             </div>
-        </section>
+        </section>*@
     @*    <div class="footerhead">
             <a class="brand a-brand" href="/" aria-label="home" aria-current="page">
                 <img src="https://assets.website-files.com/5f10771cbfea70224f1ce526/5f69042c3080b1195a9a5c91_tiny-logo.svg"
@@ -173,12 +202,12 @@
 
 
 
-        <div class="newswrap p-3">
-            <div>
+        @*   <div class="newswrap p-3">
+           <div>
                 Sign up for the Tiny Dispatch, a monthly digest of what we're
                 thinking, learning, and looking to do next.
-            </div>
-            <div class="block a-form">
+            </div>*@
+ @*           <div class="block a-form">
                 <form class="form">
                     <input type="email"
                            class="text-email a-input border-0"
@@ -197,7 +226,7 @@
                 </a>
             </div>
         </div>
-    </footer>
+        </footer>*@
 
     <div class="modal-dialog modal-dialog-centered">
 
@@ -207,25 +236,27 @@
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Contact Us</h1>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
                         <form asp-action="SubmitContactForm" method="post">
                             <!-- Form fields using the model properties -->
                             <div class="form-group">
-                                <label for="SenderName">Name</label>
-                                <input type="text" class="form-control" id="SenderName" name="SenderName" placeholder="Your Name" required>
+                                <label for="SenderName" class="mb-1">Name</label>
+                                <input type="text" class="form-control mb-1" id="SenderName" name="SenderName" placeholder="Your Name" required>
                             </div>
                             <div class="form-group">
-                                <label for="SenderEmail">Email</label>
-                                <input type="email" class="form-control" id="SenderEmail" name="SenderEmail" placeholder="Your Email" required>
+                                <label for="SenderEmail" class="mb-1">Email</label>
+                                <input type="email" class="form-control mb-1" id="SenderEmail" name="SenderEmail" placeholder="Your Email" required>
                             </div>
                             <div class="form-group">
-                                <label for="Message">Message</label>
-                                <textarea class="form-control" id="Message" name="Message" placeholder="Your Message" required></textarea>
+                                <label for="Message" class="mb-1">Message</label>
+                                <textarea class="form-control mb-1" id="Message" name="Message" placeholder="Your Message" required></textarea>
                             </div>
-                            <button type="submit" class="btn btn-primary">Submit</button>
+                            <div class="d-flex justify-content-end">
+                                <button type="submit" class="btn button mt-2">Submit</button>
+                            </div>
                         </form>
 
                     </div>

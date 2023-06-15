@@ -1120,6 +1120,21 @@ input {
 }
 
 
+.modal-content{
+    background-color: var(--cc-primary-color);
+}
+.modal-content button{
+    background-color: white;
+    color: var(--cc-primary-color)
+}
+
+.copyright{
+    font-size: .67rem;
+}
+
+.buttontext{
+    font-size: 1.1rem
+}
 
 @media screen and (min-width: 327px){
     .circle {
@@ -1270,7 +1285,7 @@ input {
 }
 
 @media screen and (min-width: 990px){
-    html{
+    html, body{
         font-size: 20px;
     }
 
@@ -1299,11 +1314,15 @@ input {
     .circle-container{
         right: 35%;
     }
+    .leadwrap{
+        margin-left: 12%;
+        margin-right: 12%;
+    }
 }
 
 
 @media screen and (min-width: 1199px) {
-  html{
+  html, body{
       font-size: 22px;
   }
     .layout3 {
