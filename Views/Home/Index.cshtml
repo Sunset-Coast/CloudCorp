@@ -1,4 +1,5 @@
-﻿@{
+﻿@model ContactModel
+@{
     ViewData["Title"] = "Home Page";
 }
 <!--First hero section-->
@@ -891,3 +892,46 @@
     </div>
 
 </section>
+
+
+<form asp-action="SubmitContactForm" method="post">
+    <!-- Form fields using the model properties -->
+    <div class="form-group">
+        <label for="SenderName">Name</label>
+        <input type="text" class="form-control" id="SenderName" name="SenderName" placeholder="Your Name" required>
+    </div>
+    <div class="form-group">
+        <label for="SenderEmail">Email</label>
+        <input type="email" class="form-control" id="SenderEmail" name="SenderEmail" placeholder="Your Email" required>
+    </div>
+    <div class="form-group">
+        <label for="Message">Message</label>
+        <textarea class="form-control" id="Message" name="Message" placeholder="Your Message" required></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+
+
+@section scripts{
+    <script>
+        let message = `@(ViewBag.SwalMessage)`;
+
+        if (!message.includes("Error") && message != ``) {
+            Swal.fire({
+                backdrop: false,
+                icon: 'success',
+                title: message,
+                showConfirmation: true
+            })
+        } else if (message.includes("Error")) {
+            Swal.fire({
+                backdrop: false,
+                icon: 'error',
+                title: 'Oops....',
+                text: message
+            })
+
+        }
+    </script>
+}
