@@ -879,9 +879,10 @@
             </div>
             <div class="col-12 col-md-6 border-danger">
                 <div class="scouttext">
-                    <button class="button d-flex a-inline-block justify-content-end">
+                    <button class="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
                         Talk More <i class="bi bi-arrow-right-circle leadicon"></i>
                     </button>
+       
 
                     <div class="leadbody">
                         The world is an ever changing place, technology included. If you're questioning your online presence, maybe it's time to upgrade your platform, we'll let you know what we think. No pressure. no fancy jargon-just a laid-back response you'll understand.
@@ -894,7 +895,7 @@
 </section>
 
 
-<form asp-action="SubmitContactForm" method="post">
+@*<form asp-action="SubmitContactForm" method="post">
     <!-- Form fields using the model properties -->
     <div class="form-group">
         <label for="SenderName">Name</label>
@@ -910,7 +911,7 @@
     </div>
     <button type="submit" class="btn btn-primary">Submit</button>
 </form>
-
+*@
 
 
 @section scripts{

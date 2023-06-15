@@ -21,7 +21,7 @@ namespace CloudCorp.Controllers
         }
         [HttpGet]
         public IActionResult Index(string? swalMessage = null)
-        {ViewData["SwalMessage"] = swalMessage;
+        {ViewData["SwalMessage"] = TempData["SwalMessage"] as string;
             var model = new ContactModel();
             return View(model);
         }
@@ -64,21 +64,22 @@ namespace CloudCorp.Controllers
                         await client.SendAsync(message);
                         await client.DisconnectAsync(true);
                     }
-                    swalMessage = "Success: We have received your message!";
+                    TempData["SwalMessage"] = "Success: We have received your message!";
                     // Redirect to a confirmation page
-                    return RedirectToAction("Index", new { swalMessage });
+                    return RedirectToAction("Index");
                 }
                 catch (Exception)
                 {
-                    swalMessage = "Error: Looks like something went wrong!";
-                    return RedirectToAction("Index", new { swalMessage });
+                    TempData["SwalMessage"] = "Error: Looks like something went wrong!";
+
+                    return RedirectToAction("Index");
                     // Handle any exceptions that occurred during email sending
                     //ModelState.AddModelError("", "An error occurred while sending the email. Please try again later.");
                     // Log the exception if needed
                     throw;
                 }
             }
-            return View(model);
+            return View("Index", model);
             // Show a success message using JavaScript alert
             //string successMessage = "Form submitted successfully!";
             //return Content($"<script>Swal.fire('Success', '{successMessage}', 'success').then(() => window.location.href = '/Home/Index');</script>");
