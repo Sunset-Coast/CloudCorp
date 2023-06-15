@@ -74,8 +74,8 @@ h3 {
     margin-top: 0px;
     font-family: var(--cc-font-heading2);
     margin-bottom: 3rem;
-  
-    font-size: 1.4rem;
+  letter-spacing: .12rem;
+    font-size: 1.8rem;
     line-height: 1.9rem;
     font-weight: 700;
 }
@@ -1272,6 +1272,49 @@ input {
 @media screen and (min-width: 990px){
     html{
         font-size: 20px;
+    }
+
+    .scoutimage{
+        display: flex;
+        position: relative;
+        justify-content: flex-end;
+    }
+    .whyheadline{
+        margin-bottom: 2rem;
+    }
+    .circle {
+        display: grid !important;
+        top: 15%;
+        right: 15%;
+    }
+
+    .layout3 {
+        grid-row-start: 1;
+        grid-row-end: 3;
+        grid-column-start: 7;
+        grid-column-end: 9;
+        align-self: center;
+    }
+
+    .circle-container{
+        right: 35%;
+    }
+}
+
+
+@media screen and (min-width: 1199px) {
+  html{
+      font-size: 22px;
+  }
+    .layout3 {
+        grid-row-start: 1;
+        grid-row-end: 3;
+        grid-column-start: 7;
+        grid-column-end: 9;
+        align-self: center;
+    }
+    .circle-container {
+        right: 37%;
     }
 }
 /* end */
